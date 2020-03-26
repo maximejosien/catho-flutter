@@ -19,7 +19,7 @@ class DetailsPage extends StatelessWidget {
         title: Text(text),
       ),
       body: FutureBuilder(
-        future: PokemonRepository().getPokemon("pikachu"),
+        future: PokemonRepository().getAllPokemon(),
         builder: (BuildContext context, AsyncSnapshot<Pokemon> data) {
           if (data.hasData) {
             Pokemon pokemon = data.data;
